@@ -44,3 +44,6 @@ html,body{
 .leaflet-marker-icon{
 	filter: hue-rotate(145deg) brightness(0.9);
 }
+.leaflet-control-attribution{
+	display: none;
+}
