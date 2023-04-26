@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/map.css">
+	<title></title>
+</head>
+<body>
+<div id="map"></div>
+<h3>Location Code: <span id="code"></span></h3>
+<script type="text/javascript">
+	let map,pin,pins;
+	map = document.getElementById('map');
+	
+
+	setPin(500,500,'Map Center',false);
+	setPin(746,181,'Royal Palace <hr><li>Elena - Guard Captain</li><li>Arianna - High Priestess</li>',true);
+	setPin(263,478,'Beggars Row <hr><li>Izz - Goblin Beggar</li>',true);
+	setPin(881,229,'Resistance HQ <hr><li>Lilian - Resistance Leader</li>',true);
+	setPin(396,498,'Blacksmith <hr><li>Julius Percine - Blacksmith</li>',true);
+	setPin(374,434,'Ares Arcane Trading Co. <hr><li>Ifir Greystone - Merchant</li>',true);
+	setPin(755,533,'Rahz Sewer Hideout <hr><li>Rahz - Former Royal Alchemist</li>',true);
+	setPin(615,131,"Advisor's Manor <hr>",true);
+	setPin(96,461,'Abandoned Church <hr>',true);
+	setPin(361,57,'Church of Calistria <hr>',true);
+	setPin(666,235,'Black Seal Prison (Secret Entrance) <hr><li>One(Dead) - Info Broker</li>',true);
+	setPin(897,377,'Guard Barracks <hr>',true);
+	setPin(261,101,"Emperor's Estate <hr>",true);
+	setPin(743,314,'Abandoned Temple of Abadar <hr>',true);
+	setPin(201,341,'Ruins of Half-Full Tavern <hr>',true);
+
+	function setPin(x,y,tag,active) {
+		if (active == true) {
+			pin = document.createElement('div');
+			pin.style.position = 'absolute';
+			pin.style.left = x + "px";
+			pin.style.top = y + "px";
+			pin.classList.add("pin");
+			pin.setAttribute("data-tooltip", tag);
+			map.appendChild(pin);
+		}
+	}
+
+	pins = document.querySelectorAll('.pin');
+	pins.forEach(function(pin) {
+  	pin.addEventListener('mouseover', function() {
+  	  var tooltip = document.createElement('div');
+  	  tooltip.classList.add('tooltip');
+  	  tooltip.innerHTML = pin.getAttribute('data-tooltip');
+  	  var rect = pin.getBoundingClientRect();
+  	  tooltip.style.position = 'absolute';
+  	  tooltip.style.left = rect.right + 4 + 'px';
+  	  tooltip.style.top = rect.top - 2 + 'px';
+  	  document.body.appendChild(tooltip);
+  	});
+  	pin.addEventListener('mouseout', function() {
+  	  var tooltip = document.querySelector('.tooltip');
+  	  if (tooltip) {
+  	    document.body.removeChild(tooltip);
+  	  }
+  	});
+	});
+	document.querySelector('#map').addEventListener('click', function(event) {
+    	var rect = event.target.getBoundingClientRect();
+    	var x = event.clientX - rect.left;
+    	var y = event.clientY - rect.top;
+    	x = x.toFixed(0);
+    	y = y.toFixed(0);
+    	//console.log('x:', x, 'y:', y);
+    	document.getElementById('code').innerHTML = "setPin("+x+","+y+",'ToolTip',true);";
+	});
+</script>
+</body>
+</html>
