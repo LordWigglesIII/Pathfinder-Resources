@@ -3,73 +3,114 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 	<link rel="stylesheet" type="text/css" href="css/map.css">
-	<title></title>
+	<title>Map V2</title>
 </head>
 <body>
 <div id="map"></div>
-<h3>Location Code: <span id="code"></span></h3>
 <script type="text/javascript">
-	let map,pin,pins;
-	map = document.getElementById('map');
+	var map = L.map('map', {
+    	crs: L.CRS.Simple,
+    	minZoom: -1.7,
+    	maxZoom: 2,
+    	maxBounds: [[0,0], [3000,4000]],
+    	maxBoundsViscosity: 1.0
+	});
 	
-
-	setPin(500,500,'Map Center',false);
-	setPin(746,181,'Royal Palace <hr><li>Elena - Guard Captain</li><li>Arianna - High Priestess</li>',true);
-	setPin(263,478,'Beggars Row <hr><li>Izz - Goblin Beggar</li>',true);
-	setPin(881,229,'Resistance HQ <hr><li>Lilian - Resistance Leader</li>',true);
-	setPin(396,498,'Blacksmith <hr><li>Julius Percine - Blacksmith</li>',true);
-	setPin(374,434,'Ares Arcane Trading Co. <hr><li>Ifir Greystone - Merchant</li>',true);
-	setPin(755,533,'Rahz Sewer Hideout <hr><li>Rahz - Former Royal Alchemist</li>',true);
-	setPin(615,131,"Advisor's Manor <hr>",true);
-	setPin(96,461,'Abandoned Church <hr>',true);
-	setPin(361,57,'Church of Calistria <hr>',true);
-	setPin(666,235,'Black Seal Prison (Secret Entrance) <hr><li>One(Dead) - Info Broker</li>',true);
-	setPin(897,377,'Guard Barracks <hr>',true);
-	setPin(261,101,"Emperor's Estate <hr>",true);
-	setPin(743,314,'Abandoned Temple of Abadar <hr>',true);
-	setPin(201,341,'Ruins of Half-Full Tavern <hr>',true);
-
-	function setPin(x,y,tag,active) {
-		if (active == true) {
-			pin = document.createElement('div');
-			pin.style.position = 'absolute';
-			pin.style.left = x + "px";
-			pin.style.top = y + "px";
-			pin.classList.add("pin");
-			pin.setAttribute("data-tooltip", tag);
-			map.appendChild(pin);
-		}
-	}
-
-	pins = document.querySelectorAll('.pin');
-	pins.forEach(function(pin) {
-  	pin.addEventListener('mouseover', function() {
-  	  var tooltip = document.createElement('div');
-  	  tooltip.classList.add('tooltip');
-  	  tooltip.innerHTML = pin.getAttribute('data-tooltip');
-  	  var rect = pin.getBoundingClientRect();
-  	  tooltip.style.position = 'absolute';
-  	  tooltip.style.left = rect.right + 4 + 'px';
-  	  tooltip.style.top = rect.top - 2 + 'px';
-  	  document.body.appendChild(tooltip);
-  	});
-  	pin.addEventListener('mouseout', function() {
-  	  var tooltip = document.querySelector('.tooltip');
-  	  if (tooltip) {
-  	    document.body.removeChild(tooltip);
-  	  }
-  	});
+	var bounds = [[0,0], [3000,4000]];
+	var image = L.imageOverlay('img/map.jpg', bounds).addTo(map);
+	
+	map.fitBounds(bounds);
+	
+	var marker1 = L.marker([2396, 3004], map.getMaxZoom()).addTo(map);
+	marker1.bindTooltip("Royal Palace <hr><li>Elena - Guard Captain</li><li>Arianna - High Priestess</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
 	});
-	document.querySelector('#map').addEventListener('click', function(event) {
-    	var rect = event.target.getBoundingClientRect();
-    	var x = event.clientX - rect.left;
-    	var y = event.clientY - rect.top;
-    	x = x.toFixed(0);
-    	y = y.toFixed(0);
-    	//console.log('x:', x, 'y:', y);
-    	document.getElementById('code').innerHTML = "setPin("+x+","+y+",'ToolTip',true);";
+	
+	var marker2 = L.marker([1095, 1060], map.getMaxZoom()).addTo(map);
+	marker2.bindTooltip("Beggars Row <hr><li>Izz - Goblin Beggar</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
 	});
+	
+	var marker3 = L.marker([2086, 3525], map.getMaxZoom()).addTo(map);
+	marker3.bindTooltip("Resistance HQ <hr><li>Lilian - Resistance Leader</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker4 = L.marker([985, 1600], map.getMaxZoom()).addTo(map);
+	marker4.bindTooltip("Blacksmith <hr><li>Julius Percine - Blacksmith</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker5 = L.marker([1227, 1509], map.getMaxZoom()).addTo(map);
+	marker5.bindTooltip("Ares Arcane Trading Co. <hr><li>Ifir Greystone - Merchant</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker6 = L.marker([857, 3006], map.getMaxZoom()).addTo(map);
+	marker6.bindTooltip("Rahz Sewer Hideout <hr><li>Rahz - Former Royal Alchemist</li>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker7 = L.marker([2447, 2491], map.getMaxZoom()).addTo(map);
+	marker7.bindTooltip("Advisor's Manor <hr>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker8 = L.marker([1131, 391], map.getMaxZoom()).addTo(map);
+	marker8.bindTooltip('Abandoned Church <hr>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker9 = L.marker([2728, 1468], map.getMaxZoom()).addTo(map);
+	marker9.bindTooltip('Church of Calistria <hr>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker10 = L.marker([2032, 2694], map.getMaxZoom()).addTo(map);
+	marker10.bindTooltip('Black Seal Prison (Secret Entrance) <hr><li>One(Dead) - Info Broker</li>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker11 = L.marker([1454, 3604], map.getMaxZoom()).addTo(map);
+	marker11.bindTooltip('Guard Barracks <hr>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker12 = L.marker([2560, 1056], map.getMaxZoom()).addTo(map);
+	marker12.bindTooltip("Emperor's Estate <hr>",{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker13 = L.marker([1745, 2986], map.getMaxZoom()).addTo(map);
+	marker13.bindTooltip('Abandoned Temple of Abadar <hr>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	var marker14 = L.marker([1607, 806], map.getMaxZoom()).addTo(map);
+	marker14.bindTooltip('Ruins of Half-Full Tavern <hr>',{
+    opacity: 0.8,
+    className: 'tooltip' 
+	});
+
+	// map.on('click', function(e) {
+    // alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+	// });
 </script>
 </body>
 </html>
