@@ -1,0 +1,49 @@
+*{
+	font-family: "Georgia";
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  height: auto;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+html,body{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+#map{
+	width: 66%;
+	height: 96%;
+	margin: 0 auto 0 auto;
+  	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 50%;
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+	border: solid black;
+	/*background-image: url(../img/map.jpg);
+	background-size: contain;*/
+}
+.tooltip{
+	background-color: black;
+	color: white;
+	padding: 5px;
+	font-size: 14px;
+}
+.tooltip li{
+	list-style-type: square;
+}
+.leaflet-marker-icon{
+	filter: hue-rotate(145deg) brightness(0.9);
+}
+.leaflet-control-attribution{
+	display: none;
+}

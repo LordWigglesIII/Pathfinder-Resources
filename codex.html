@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/codex.css">
+	<title>Codex - Home</title>
+</head>
+<body>
+<div id="wrapper">
+	<ul id="navMenu">
+		<li><a href="#" onclick="loadPage(this)">Home</a></li>
+		<li><a href="#" onclick="loadPage(this)">Map</a></li>
+		<li><a href="#" onclick="loadPage(this)">Races</a></li>
+		<li><a href="#" onclick="loadPage(this)">Deities</a></li>
+		<li><a href="#" onclick="loadPage(this)">Spell-Creation</a></li>
+		<li><a href="#" onclick="loadPage(this)">Stamina-System</a></li>
+	</ul>
+	<div id="pageContent"></div>
+</div>
+<script type="text/javascript">
+	function loadPage(page) {
+		$.ajax({
+    		method: 'GET',
+    		url: 'codex/'+page.innerHTML+'.html',
+		}).done(function(data) {
+    		$('#pageContent').html(data);
+    		document.title = "Codex - "+page.innerHTML;
+		});
+	}
+</script>
+</body>
+</html>
