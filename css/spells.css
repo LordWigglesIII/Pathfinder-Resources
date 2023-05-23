@@ -1,0 +1,31 @@
+*{
+	font-family: verdana;
+}
+body{
+	background-image: url(../img/spells/bg.jpg);
+	background-size: cover;
+	background-repeat: repeat-y;
+	margin:0;
+	padding:0;
+}
+table{
+	width: 90%;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: rgba(128, 128, 128, 0.2);
+}
+table,td,th{
+	border: solid #616161;
+	border-collapse: collapse;
+	border-style: outset;
+	color: white;
+	text-align: center;
+}
+img{
+	width: 100px;
+}
+td{
+	padding: 5px;
+}

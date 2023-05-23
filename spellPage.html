@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/spells.css">
+	<title>ER Spells</title>
+</head>
+<body>
+<table id="sList">
+	<tr>
+		<th>Name:</th>
+		<th>Effect:</th>
+		<th>Req. Level:</th>
+		<th>Duration:</th>
+	</tr>
+	<tr>
+		<td><img src="img/spells/beast_claw.png" alt="Beast_Claw"><p>Beast Claw</p></td>
+		<td><span class="desc">From the caster a 15ft cone of sharp rock claws rend any being in it's AOE dealing 1D6+CL damage.</span></td>
+		<td><span class="lvl">1</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/bestial_constitution.png" alt="Bestial_Constitution"><p>Bestial Constitution</p></td>
+		<td><span class="desc">Reduces save DC of hostile magical effects by 1+CL(Max. 9).</span></td>
+		<td><span class="lvl">1</span></td>
+		<td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/bestial_sling.png" alt="Bestial_Sling"><p>Bestial Sling</p></td>
+		<td><span class="desc">From the caster a 25ft cone of CL sharp rock projectiles are fired, each dealing 1D6 damage.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/bestial_vitality.png" alt="Bestial_Vitality"><p>Bestial Vitality</p></td>
+		<td><span class="desc">Heals the caster 2HP each turn.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/stone_of_gurranq.png" alt="Stone_of_Gurranq"><p>Stone of Gurranq</p></td>
+		<td><span class="desc">Make a single ranged attack with +6TH, on a succesful hit deals 2D6 damage, on crit target is knocked prone(crit on 17-20).</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/gurrangs_beast_claw.png" alt="Gurranq's_Beast_Claw"><p>Gurranq's Beast Claw</p></td>
+		<td><span class="desc">From the caster a 20ft. cone of sharp rock claws rends any being in it's AOE dealing CL*D6 damage.</span></td>
+		<td><span class="lvl">4</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/blood_boon.png" alt="Blood_Boon"><p>Blood Boon</p></td>
+		<td><span class="desc">Deals 2D6+CL fire damage to anyone in a 15ft. cone before the caster, all hit targets must succeed a DC16 saving throw, on a failed save healing is prevented for CL Rounds.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/bloodflame_blade.png" alt="Bloodflame_Blade"><p>Bloodflame Blade</p></td>
+		<td><span class="desc">Whenever affected weapon deals damage it deals an additional 1D8 points of fire damage to that target and healing is prevented for CL Rounds.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/bloodflame_talons.png" alt="Bloodflame_Talons"><p>Bloodflame Talons</p></td>
+		<td><span class="desc">Perform a sweeping slash causing all within a 5ft. cone to take 1D4 fire damage, then 3 consecutive 5ft. radius explosions go of each with a DC12 reflex save that if failed deal 1D8 fire damage and block healing for 1 round.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/swarm_of_flies.png" alt="Swarm_of_Flies"><p>Swarm of Flies</p></td>
+		<td><span class="desc">All targets within a 10ft. radius before the caster have their healing blocked and AC reduced by 3 for however long they remain in the cloud + CL/2 Rounds.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td colspan="4"><p>[All dragon incantations use both movement and bonus action for charge-up.]</p></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/dragonfire.png" alt="Dragonfire"><p>Dragonfire</p></td>
+		<td><span class="desc">Creates a 30ft. cone of fire before the caster dealing 2D8 + CL fire damage to all targets.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/dragonice.png" alt="Dragonice"><p>Dragonice</p></td>
+		<td><span class="desc">Creates a 30ft. cone of ice before the caster dealing 2D8 + CL cold damage to all targets.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/dragonclaw.png" alt="Dragonclaw"><p>Dragonclaw</p></td>
+		<td><span class="desc">Make a +6TH melee attack to deal CL*D6 damage.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/dragonmaw.png" alt="Dragonmaw"><p>Dragonmaw</p></td>
+		<td><span class="desc">Make a +6TH grapple to deal CL*D6-3 damage, the target becomes grappled.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/rotten_breath.png" alt="Rotten_Breath"><p>Rotten Breath</p></td>
+		<td><span class="desc">Creates a 30ft. cone of rot before the caster dealing 1D6 damage each turn to all targets.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/glintstone_breath.png" alt="Glintstone_Breath"><p>Glintstone Breath</p></td>
+		<td><span class="desc">Creates a 30ft. cone of magic before the caster dealing 2D6 damage to all targets. Until the casters next turn all magic-source damage against those targets is increased by 1 dice.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/magma_breath.png" alt="Magma_Breath"><p>Magma Breath</p></td>
+		<td><span class="desc">Creates a 30ft. cone of magic before the caster dealing 1D6 fire damage to all targets, the area becomes then covered in magma dealing 1D4 fire damage each turn to anyone standing in it.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/agheels_flame.png" alt="Agheel's_Flame"><p>Agheel's Flame</p></td>
+		<td><span class="desc">Creates a 40ft. cone of fire before the caster dealing 3D8 + CL fire damage to all targets.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/borealiss_mist.png" alt="Borealis's_Mist"><p>Borealis's Mist</p></td>
+		<td><span class="desc">Creates a 40ft. cone of ice before the caster dealing 3D8 + CL cold damage to all targets.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/ekzykess_decay.png" alt="Ekzykes's_Decay"><p>Ekzykes's Decay</p></td>
+		<td><span class="desc">Creates a 40ft. cone of rot before the caster dealing 2D6 damage each turn to all targets.</span></td>
+		<td><span class="lvl">4</span></td>
+		<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/smarags_glintstone_breath.png" alt="Smarag's_Glintstone_Breath"><p>Smarag's Glintstone Breath</p></td>
+		<td><span class="desc">Creates a 35ft. cone of magic before the caster dealing 3D6 damage to all targets. Until the casters next turn all magic-source damage against those targets is increased by 2 dice.</span></td>
+		<td><span class="lvl">4</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/theodorixs_magma.png" alt="Theodorix's_Magma"><p>Theodorix's Magma</p></td>
+		<td><span class="desc">Creates a 40ft. cone of magma before the caster dealing 2D6 fire damage to all targets, the area becomes then covered in magma dealing 2D4 fire damage each turn to anyone standing in it.</span></td>
+		<td><span class="lvl">4</span></td>
+		<td><span class="dur">4 Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/greyolls_roar.png" alt="Greyoll's_Roar"><p>Greyoll's Roar</p></td>
+		<td><span class="desc">All targets in a 35ft. radius must succeed a DC16 CON save or take 5D6 sonic damage, on a succesful save they take 2D6 damage instead.</span></td>
+		<td><span class="lvl">4</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/placidusaxs_ruin.png" alt="Placidusax's_Ruin"><p>Placidusax's Ruin</p></td>
+		<td><span class="desc">Create 2 rays of powerful energy capable of penetrating multiple enemies and cover/armor, dealing CL*D8 magic damage on hit.</span></td>
+		<td><span class="lvl">6</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/electrify_armament.png" alt="Electrify_Armament"><p>Electrify Armament</p></td>
+    	<td><span class="desc">Whenever affected weapon deals electric type damage it deals an additional (caster level) points of electricity damage to that target.</span></td>
+    	<td><span class="lvl">2</span></td>
+    	<td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/lightning_spear.png" alt="Lightning_Spear"><p>Lightning Spear</p></td>
+	    <td><span class="desc">Deals 2D6 + Int mod electricity damage from above to a target within 30ft.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/lightning_strike.png" alt="Lightning_Strike"><p>Lightning Strike</p></td>
+	    <td><span class="desc">Choose a point of impact within 15ft. you can see, from impact up to 6(caster level) bolts of lightning appear. On hit these deal 2D6 + Int mod damage.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/ancient_dragons_lightning_spear.png" alt="Ancient_Dragons_Lightning_Spear"><p>Ancient Dragon's Lightning Spear</p></td>
+	    <td><span class="desc">Deals 2D8+CL electricity damage from above to a target within 40ft.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/ancient_dragons_lightning_strike.png" alt="Ancient_Dragons_Lightning_Strike"><p>Ancient Dragon's Lightning Strike</p></td>
+	    <td><span class="desc">Choose a point of impact within 15ft. you can see, from impact each target in a 15ft. radius must roll a D10, if rolled below 5 they take 3D6 electricity damage from above.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/death_lightning.png" alt="Death_Lightning"><p>Death Lightning</p></td>
+    	<td><span class="desc">Each target in a 15ft. radius around the caster must roll a D10, if rolled below 5 they take 1D6 electricity damage from above, they must then succeed a DC14 CON save or get a failed death save.</span></td>
+    	<td><span class="lvl">4</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/dragonbolt_blessing.png" alt="Dragonbolt_Blessing"><p>Dragonbolt Blessing</p></td>
+	    <td><span class="desc">Caster becomes immune to electricity damage and electricity-based attacks made by the caster deal CL additional damage.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">3 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/fortissaxs_lightning_spear.png" alt="Fortissaxs_Lightning_Spear"><p>Fortissax's Lightning Spear</p></td>
+	    <td><span class="desc">Deals 2X 2D8+CL electricity damage from above to up to two targets within 40ft.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/frozen_lightning_spear.png" alt="Frozen_Lightning_Spear"><p>Frozen Lightning Spear</p></td>
+	    <td><span class="desc">Deals 2D6 + Int mod electricity damage and 1D6 cold damage from above to a target within 30ft.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/honed_bolt.png" alt="Honed_Bolt"><p>Honed Bolt</p></td>
+	    <td><span class="desc">Deals CL*D4 electricity damage from above to a target within 40ft.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/lansseaxs_glaive.png" alt="Lansseaxs_Glaive"><p>Lansseax's Glaive</p></td>
+    	<td><span class="desc">Make a +CLTH melee attack against a target, dealing 3D8 electricity damage.</span></td>
+    	<td><span class="lvl">6</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/vykes_dragonbolt.png" alt="Vykes_Dragonbolt"><p>Vyke's Dragonbolt</p></td>
+	    <td><span class="desc">Whenever affected weapon deals electric type damage it deals an additional CL*D4 of electricity damage to that target.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/aspect_of_the_crucible_breath.png" alt="Aspect_of_the_Crucible_Breath"><p>Aspect of the Crucible: Breath</p></td>
+	    <td><span class="desc">Until end of turn, while moving you may spray a 5ft. cone of fire in front of you, dealing 2D6 fire damage on hit.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/aspect_of_the_crucible_horns.png" alt="Aspect_of_the_Crucible_Horns"><p>Aspect of the Crucible: Horns</p></td>
+	    <td><span class="desc">Charge up to 10ft. forward, then if you are in close quarters with a target. Make a +8TH melee attack dealing 2D8 piercing damage.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/aspect_of_the_crucible_tail.png" alt="Aspect_of_the_Crucible_Tail"><p>Aspect of the Crucible: Tail</p></td>
+	    <td><span class="desc">All targets in a 5ft. radius around the caster that aren't flying must succeed a DC15 Reflex save or take 1D6 damage and be knocked prone.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/barrier_of_gold.png" alt="Barrier_of_Gold"><p>Barrier of Gold</p></td>
+    	<td><span class="desc">All magic-save DC is lowered by 5 for caster and allies within 10ft.</span></td>
+    	<td><span class="lvl">4</span></td>
+    	<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/blessings_boon.png" alt="Blessings_Boon"><p>Blessing's Boon</p></td>
+	    <td><span class="desc">Heals 1HP each turn for caster and allies within 10ft.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">CL(Max. 6) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/golden_vow.png" alt="Golden_Vow"><p>Golden Vow</p></td>
+	    <td><span class="desc">Weapons of caster and allies within 15ft. are treated as +2 weapons.</span></td>
+	    <td><span class="lvl">-</span></td>
+	    <td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/black_blade.png" alt="Black_Blade"><p>Black Blade</p></td>
+	    <td><span class="desc">Fire a magic projectile with a max. range of 30ft. that on impact with a target deals 2D8+CL damage and reduces that target's maximum HP by the same amount.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/blessing_of_the_erdtree.png" alt="Blessing_of_the_Erdtree"><p>Blessing of the Erdtree</p></td>
+	    <td><span class="desc">Heals 4HP each turn for caster and allies within 10ft.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">CL(Max. 6) Rounds</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/golden_lightning_fortification.png" alt="Golden_Lightning_Fortification"><p>Golden Lightning Fortification</p></td>
+    	<td><span class="desc">Caster and allies within 10ft. become immune to electricity damage and electricity-based attacks made by them deal CL additional damage.</span></td>
+    	<td><span class="lvl">6</span></td>
+    	<td><span class="dur">3 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/elden_stars.png" alt="Elden_Stars"><p>Elden Stars</p></td>
+	    <td><span class="desc">(Uses movement for charge-up), Creates a homing bolt of magic that moves 2.5ft. each turn and deals 3D8 damage on hit, while traveling the bolt shoots CL bolts of fast traveling magic each dealing 1D4 damage.</span></td>
+	    <td><span class="lvl">7</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/erdtree_heal.png" alt="Erdtree_Heal"><p>Erdtree Heal</p></td>
+	    <td><span class="desc">Heals caster and allies within 15ft. for CL*D6 HP.</span></td>
+	    <td><span class="lvl">7</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/protection_of_the_erdtree.png" alt="Protection_of_the_Erdtree"><p>Protection of the Erdtree</p></td>
+	    <td><span class="desc">Caster and allies within 10ft. take only half damage from elemental damage.</span></td>
+	    <td><span class="lvl">7</span></td>
+	    <td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/wrath_of_gold.png" alt="Wrath_of_Gold"><p>Wrath of Gold</p></td>
+	    <td><span class="desc">Creates a 25ft. radius shockwave centered around the caster, each target within the radius must succeed a DC20 Reflex save or be pushed back 10ft. and knocked prone.</span></td>
+	    <td><span class="lvl">8</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/burn_o_flame.png" alt="Burn_O_Flame"><p>Burn O Flame</p></td>
+    	<td><span class="desc">Each target in a 20ft. radius around the caster must roll a D10, if rolled below 5 they take 2D6 fire damage each turn.</span></td>
+    	<td><span class="lvl">3</span></td>
+    	<td><span class="dur">1D6 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_fall_upon_them.png" alt="Flame_Fall_Upon_Them"><p>Flame Fall Upon Them</p></td>
+	    <td><span class="desc">In a 25ft. semi-circle before the caster all targets must succeed a DC15 Reflex save or take 3D6 fire damage.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/giantsflame_take_thee.png" alt="Giantsflame_Take_Thee"><p>Giantsflame Take Thee</p></td>
+	    <td><span class="desc">(Uses movement for charge-up), Creates a large fireball with a range of 40ft. on impact it deals 4D8+CL fire damage in a 10ft. radius.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_of_the_fell_god.png" alt="Flame_of_the_Fell_God"><p>Flame of the Fell God</p></td>
+	    <td><span class="desc">(Uses movement and bonus action for charge-up), Creates a massive fireball with a range of 50ft. on impact it deals CL*D8 fire damage in a 20ft. radius.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_sling.png" alt="Flame_Sling"><p>Flame Sling</p></td>
+	    <td><span class="desc">Creates a fireball with a range of 25ft. on impact it deals 1D6+CL fire damage in a 5ft. radius.</span></td>
+	    <td><span class="lvl">1</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/surge_o_flame.png" alt="Surge_O_Flame"><p>Surge O Flame</p></td>
+    	<td><span class="desc">Creates a 10ft. stream of fire from the casters hand dealing 1D6 fire damage for each turn spent in it.</span></td>
+    	<td><span class="lvl">2</span></td>
+    	<td><span class="dur">Concentration</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_cleanse_me.png" alt="Flame_Cleanse_Me"><p>Flame, Cleanse Me</p></td>
+	    <td><span class="desc">Cures caster of (curable) poisons, diseases and curses.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_grant_me_strength.png" alt="Flame_Grant_Me_Strength"><p>Flame, Grant Me Strength</p></td>
+	    <td><span class="desc">For up to 5(caster level) turns, fire and physical damage dealt by the caster is increased by 1 dice.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">CL(Max. 5) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/flame_protect_me.png" alt="Flame_Protect_Me"><p>Flame, Protect Me</p></td>
+	    <td><span class="desc">For up to 5(caster level) turns, fire damage dealt to the caster is halved.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">CL(Max. 5) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/catch_flame.png" alt="Catch_Flame"><p>Catch Flame</p></td>
+	    <td><span class="desc">Make a +5TH unarmed melee attack, on hit it deals CL*D4 fire damage.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/o_flame.png" alt="O_Flame"><p>O, Flame</p></td>
+    	<td><span class="desc">Make a +5TH unarmed melee attack, on hit it deals CL*D6 fire damage.</span></td>
+    	<td><span class="lvl">5</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/whirl_o_flame.png" alt="Whirl_O_Flame"><p>Whirl O Flame</p></td>
+	    <td><span class="desc">Creates a 15ft. wide arc of fire before the caster dealing 1D6+CL fire damage on hit.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/fires_deadly_sin.png" alt="Fires_Deadly_Sin"><p>Fire's Deadly Sin</p></td>
+	    <td><span class="desc">Creates a 5ft. radius burst of fire dealing 1D8 fire damage, caster is then lit on fire, dealing 1D4 damage to the caster and anyone touched each turn, while on fire, caster's fire attacks deal +4 damage.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">10 Rounds</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td colspan="4"><p>[Frenzy spell effects after ||| also apply to the caster. If a target gets to 4 frenzy stacks they go back to zero and they become staggered, lose CL*2 HP <br> and for up to 5(caster level) turns all rolls are made with disadvantage.]</p></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/the_flame_of_frenzy.png" alt="The_Flame_of_Frenzy"><p>The Flame of Frenzy</p></td>
+    	<td><span class="desc">Creates a bolt of fire that on hit deals 1D4 fire damage. ||| On hit target must succeed a DC13 Will save or get a frenzy stack.</span></td>
+    	<td><span class="lvl">1</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/inescapable_frenzy.png" alt="Inescapable_Frenzy"><p>Inescapable Frenzy</p></td>
+	    <td><span class="desc">Perform a +3TH grapple on an enemy within melee range. ||| On success the target must succeed a DC12 Will save or get 3 frenzy stacks.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/howl_of_shabriri.png" alt="Howl_of_Shabriri"><p>Howl of Shabriri</p></td>
+	    <td><span class="desc">Caster's attacks deal +CL damage. ||| All targets within 20ft. must succeed a DC13 Will save or get a frenzy stack.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/frenzied_burst.png" alt="Frenzied_Burst"><p>Frenzied Burst</p></td>
+	    <td><span class="desc">Make a +6TH ranged attack with a range of 60ft. that deals 3D4 fire damage on hit. ||| On hit target must succeed a DC13 Will save or get a frenzy stack.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/unendurable_frenzy.png" alt="Unendurable_Frenzy"><p>Unendurable Frenzy</p></td>
+	    <td><span class="desc">All targets in a 20ft. cone in front of the caster must succeed a DC15 Reflex save or take 2D4 fire damage. ||| All hit must succeed a DC13 Will save or get a frenzy stack.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">Concentration</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/noble_presence.png" alt="Noble_Presence"><p>Noble Presence</p></td>
+    	<td><span class="desc">Creates a 10ft. shockwave centered on the caster dealing 1D4 damage to anyone within range and pushing them back 10ft.</span></td>
+    	<td><span class="lvl">2</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/black_flame.png" alt="Black_Flame"><p>Black Flame</p></td>
+	    <td><span class="desc">Creates a fireball with a range of 20ft. on impact it drains 1% of max HP(rounded up) each turn in a 5ft. radius.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">CL(Max. 10) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/black_flame_blade.png" alt="Black_Flame_Blade"><p>Black Flame Blade</p></td>
+	    <td><span class="desc">Whenever affected weapon deals damage it deals an additional 1% of max HP(rounded up) to that target.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/black_flame_ritual.png" alt="Black_Flame_Ritual"><p>Black Flame Ritual</p></td>
+	    <td><span class="desc">All targets in a 15ft. radius around the caster lose 1% of max HP(rounded up) each turn.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">CL(Max. 8) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/black_flame_protection.png" alt="Black_Flame_Protection"><p>Black Flame Protection</p></td>
+	    <td><span class="desc">Physical damage dealt to the caster is halved.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">5 Rounds</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/scouring_black_flame.png" alt="Scouring_Black_Flame"><p>Scouring Black Flame</p></td>
+    	<td><span class="desc">Creates a 15ft. wide arc of black fire before the caster on impact it drains 1% of max HP(rounded up) each turn.</span></td>
+    	<td><span class="lvl">7</span></td>
+    	<td><span class="dur">CL(Max. 8) Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/discus_of_light.png" alt="Discus_of_Light"><p>Discus of Light</p></td>
+	    <td><span class="desc">Make a +6TH ranged attack that deals CL radiant damage that passes through targets, if next turn the target hasn't moved they take the damage again.</span></td>
+	    <td><span class="lvl">1</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/triple_rings_of_light.png" alt="Triple_Rings_of_Light"><p>Triple Rings of Light</p></td>
+	    <td><span class="desc">Make 3 +6TH ranged attacks that deals CL radiant damage that passes through targets, if next turn the target hasn't moved they take the damage again.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/orders_blade.png" alt="Orders_Blade"><p>Order's Blade</p></td>
+	    <td><span class="desc">Whenever affected weapon deals damage it deals an additional CL*D4 radiant damage.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/immutable_shield.png" alt="Immutable_Shield"><p>Immutable Shield</p></td>
+	    <td><span class="desc">Caster's equipped shield's AC bonus is doubled.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">5(caster level) Rounds</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/law_of_causality.png" alt="Law_of_Causality"><p>Law of Causality</p></td>
+    	<td><span class="desc">After casting this spell, whenever caster is dealt damage for the third time since casting, the attacker is dealt CL*D6 radiant damage.</span></td>
+    	<td><span class="lvl">4</span></td>
+    	<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/law_of_regression.png" alt="Law_of_Regression"><p>Law of Regression</p></td>
+	    <td><span class="desc">Heals all negative effects within 15ft. around the caster for the caster and allies.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/lithany_of_proper_death.png" alt="Lithany_of_Proper_Death"><p>Lithany of Proper Death</p></td>
+	    <td><span class="desc">Creates a 15ft. wide 10ft. long shockwave that deals 1D6 Radiant damage and destroys most undead.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/order_healing.png" alt="Order_Healing"><p>Order Healing</p></td>
+	    <td><span class="desc">Removes 1 failed death-save for caster or ally within 5ft.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/radagons_rings_of_light.png" alt="Radagons_Rings_of_Light"><p>Radagon's Rings of Light</p></td>
+	    <td><span class="desc">Creates a 30ft. radius shockwave centered on the caster, all non-flying targets within range take CL*D6 radiant damage.</span></td>
+	    <td><span class="lvl">6</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/pest_threads.png" alt="Pest_Threads"><p>Pest Threads</p></td>
+    	<td><span class="desc">Creates CL threads before the caster that home in on the target dealing 2 damage on hit.</span></td>
+    	<td><span class="lvl">2</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/poison_armament.png" alt="Poison_Armament"><p>Poison Armament</p></td>
+	    <td><span class="desc">Whenever affected weapon deals damage it deals an additional 2 points of poison damage each turn for CL turns to that target.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/poison_mist.png" alt="Poison_Mist"><p>Poison Mist</p></td>
+	    <td><span class="desc">Creates a 5ft. radius cloud of poison before the caster dealing 2 points of poison damage each turn while in it or for CL rounds after leaving.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">5 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/scarlet_aeonia.png" alt="Scarlet_Aeonia"><p>Scarlet Aeonia</p></td>
+	    <td><span class="desc">(Uses movement and bonus action for charge-up), Leap 10ft. into the air, then dash down to a point within 20ft. on point of impact in a 15ft. radius all targets take CL damage and 1D8 damage each turn.</span></td>
+	    <td><span class="lvl">8</span></td>
+	    <td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td colspan="4"><p>Sorceries:</p></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/rejection.png" alt="Rejection"><p>Rejection</p></td>
+    	<td><span class="desc">Pushes back 5ft. anyone within 5ft. of the caster.</span></td>
+    	<td><span class="lvl">1</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/urgent_heal.png" alt="Urgent_Heal"><p>Urgent Heal</p></td>
+	    <td><span class="desc">[Bonus action], heals the caster 1D6 HP.</span></td>
+	    <td><span class="lvl">1</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/assassins_approach.png" alt="Assassins_Approach"><p>Assassins Approach</p></td>
+	    <td><span class="desc">For 2 rounds, caster gains a +5 and advantage on all stealth checks.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">2</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/darkness.png" alt="Darkness"><p>Darkness</p></td>
+	    <td><span class="desc">Creates a 5ft. radius cloud of black smoke that is impossible to see through for anyone beside the caster.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/shadow_bait.png" alt="Shadow_Bait"><p>Shadow Bait</p></td>
+	    <td><span class="desc">Creates a 45ft. range invisible projectile that draws attention to its point of impact.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/oracle_bubbles.png" alt="Oracle_Bubbles"><p>Oracle Bubbles</p></td>
+    	<td><span class="desc">Create CL bubbles moving 5ft. each turn with a range of 60ft. that deal 1D4+CL damage on hit, and remove all dirt and grime from target.</span></td>
+    	<td><span class="lvl">2</span></td>
+    	<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/great_oracular_bubble.png" alt="Great_Oracular_Bubble"><p>Great Oracular Bubble</p></td>
+	    <td><span class="desc">Create a bubble moving 5ft. each turn with a range of 60ft. that deal 2D10+CL damage on hit, and removes all dirt and grime from target.</span></td>
+	    <td><span class="lvl">3</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/rancorcall.png" alt="Rancorcall"><p>Rancorcall</p></td>
+	    <td><span class="desc">Creates a homing bolt that moves 10ft. each turn towards its target, on hit(if not blocked) it deals 1D6 damage and gives 1 failed death-save.</span></td>
+	    <td><span class="lvl">5</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/ancient_death_rancor.png" alt="Ancient_Death_Rancor"><p>Ancient Death Rancor</p></td>
+	    <td><span class="desc">Creates a homing bolt that moves 15ft. each turn towards its target, on hit(if not blocked) it deals 2D6 damage and gives 2 failed death-saves.</span></td>
+	    <td><span class="lvl">7</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/explosive_ghostflame.png" alt="Explosive_Ghostflame"><p>Explosive Ghostflame</p></td>
+	    <td><span class="desc">Creates a 15ft. radius explosion centered on the caster, anyone caught in the blast must succeed a DC17 CON save or get 1 failed death-save.</span></td>
+	    <td><span class="lvl">8</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+    	<td><img src="img/spells/fias_mist.png" alt="Fias_Mist"><p>Fia's Mist</p></td>
+    	<td><span class="desc">Creates a 5ft. radius cloud of mist before the caster, all who start or end their turn in the mist must succeed a DC17 CON save or get 1 failed death-save.</span></td>
+    	<td><span class="lvl">9</span></td>
+    	<td><span class="dur">5 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/tibias_summons.png" alt="Tibias_Summons"><p>Tibia's Summons</p></td>
+	    <td><span class="desc">Choose a target within 35ft. you can see, next turn those who live in death drag said target to oblivion, gear and all.</span></td>
+	    <td><span class="lvl">9</span></td>
+	    <td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/rannis_dark_moon.png" alt="Rannis_Dark_Moon"><p>Ranni's Dark Moon</p></td>
+	    <td><span class="desc">Create a moon shaped projectile moving 10ft. each turn towards its target, on hit it deals Int mod*D10 cold damage and the target takes CL bonus damage from magic.</span></td>
+	    <td><span class="lvl">7</span></td>
+	    <td><span class="dur">2 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/terra_magicka.png" alt="Terra_Magicka"><p>Terra Magicka</p></td>
+	    <td><span class="desc">Creates a 5ft. wide magical mark on the ground below the caster, any magic cast while standing on the mark may add 1 dice to the spell.</span></td>
+	    <td><span class="lvl">4</span></td>
+	    <td><span class="dur">4 Rounds</span></td>
+	</tr>
+	<tr>
+	    <td><img src="img/spells/thopss_barrier.png" alt="Thops's_Barrier"><p>Thops's Barrier</p></td>
+	    <td><span class="desc">Creates a barrier before the caster that deflects any spell back towards its caster as long as the spell DC is lower than the barrier's caster's CL + 10.</span></td>
+	    <td><span class="lvl">2</span></td>
+	    <td><span class="dur">Concentration</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/meteorite_of_astel.png" alt="Meteorite_of_Astel"><p>Meteorite of Astel</p></td>
+		<td><span class="desc">15ft. above the caster a portal opens from where each turn 2D4 projectiles launch forth striking random spots within a 15ft.x20ft. area before the caster, each projectile dealing CL*D6 damage on hit.</span></td>
+		<td><span class="lvl">8</span></td>
+		<td><span class="dur">Concentration</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/ambush_shard.png" alt="Ambush_Shard"><p>Ambush Shard</p></td>
+		<td><span class="desc">Choose a target you can see within 35ft., a magic bolt launches at said target from behind them, dealing 1D4+CL damage on hit.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/eternal_darkness.png" alt="Eternal_Darkness"><p>Eternal Darkness</p></td>
+		<td><span class="desc">5ft. above the caster a portal opens sucking in all spells that come within 5ft. of the portal.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">4 Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/unseen_blade.png" alt="Unseen_Blade"><p>Unseen Blade</p></td>
+		<td><span class="desc">Caster's weapon becomes undetectable and cannot be found by others when searching for weapons.</span></td>
+		<td><span class="lvl">3</span></td>
+		<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/night_maidens_mist.png" alt="Night_Maiden's_Mist"><p>Night Maiden's Mist</p></td>
+		<td><span class="desc">Creates a 5ft. radius cloud of mist before the caster, all who start or end their turn in the mist take 1D4 damage for each turn they have spend in it.</span></td>
+		<td><span class="lvl">6</span></td>
+		<td><span class="dur">5 Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/founding_rain_of_stars.png" alt="Founding_Rain_of_Stars"><p>Founding Rain of Stars</p></td>
+		<td><span class="desc">Choose a point within 45ft. you can see, above that point a massive 30ft. radius cloud appears raining magic bolts down at random, on hit each bolt deals 1D6+Int mod damage.</span></td>
+		<td><span class="lvl">8</span></td>
+		<td><span class="dur">CL Rounds</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/comet_azur.png" alt="Comet_Azur"><p>Comet Azur</p></td>
+		<td><span class="desc">Fire a 40ft. range beam of pure magic, dealing CL*D12 damage to anyone starting or ending their turn in it.</span></td>
+		<td><span class="lvl">10</span></td>
+		<td><span class="dur">Concentration, max, CL(Max. 8) Rounds</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td colspan="4"><p>[Briar Sorceries deal 12 damage to the caster on cast. if a target gets to 8 bleed stacks they go back to zero and they lose 10% of maximum HP.]</p></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/briars_of_sin.png" alt="Briars_of_Sin"><p>Briars of Sin</p></td>
+		<td><span class="desc">Deals 1D4 damage to all targets in a 5ft. radius and applies 1 bleed stack.</span></td>
+		<td><span class="lvl">1</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td><img src="img/spells/briars_of_punishment.png" alt="Briars_of_Punishment"><p>Briars of Punishment</p></td>
+		<td><span class="desc">Deals 2D4 damage to all targets in a 10ft. radius and applies 1 bleed stack.</span></td>
+		<td><span class="lvl">2</span></td>
+		<td><span class="dur">-</span></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+	<tr>
+		<td colspan="4"><p>Custom Spells:</p></td>
+	</tr>
+	<tr>
+		<td colspan="4"><hr></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function replaceCL() {
+    	let num = prompt("Please enter your caster level(CL):");
+    	let table = document.getElementById("sList");
+    	let cells = table.getElementsByTagName("td");
+    	for (let i = 0; i < cells.length; i++) {
+        	cells[i].innerHTML = cells[i].innerHTML.replace(/CL/g, num);
+    	}
+	}
+	replaceCL();
+</script>
+</body>
+</html>
